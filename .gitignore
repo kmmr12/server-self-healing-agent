@@ -1,0 +1,16 @@
+# Ignore everything by default
+/*
+
+# Always keep the ignore file itself
+!.gitignore
+
+# Allow these top-level dirs/files
+!/agent/
+!/cron/
+!/reports/
+!/README.md
+
+# And include everything inside those dirs
+!/agent/**
+!/cron/**
+!/reports/**
