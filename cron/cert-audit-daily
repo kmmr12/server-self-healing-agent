@@ -1,0 +1,1 @@
+30 4 * * * root LE_EMAIL=admin@uplymedia.com DO_RENEW=true /opt/agent/cert_audit_sites.sh >/dev/null 2>&1
