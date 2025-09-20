@@ -1,0 +1,11 @@
+PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
+
+# Every Saturday at 1:25
+25 1 * * 6     root    /opt/alt/tmpreaper/usr/sbin/tmpreaper 168 /var/imunify360/tmp > /dev/null 2>&1 || :
+# Every Saturday at 2:25
+25 2 * * 6     root    /opt/alt/tmpreaper/usr/sbin/tmpreaper 168 /var/imunify360/tmp_cleanup > /dev/null 2>&1 || :
+# Every 5 minutes. Ignore "ERROR: imunify360 service is running."
+*/5 * * * *    root    bash -c "sleep $((RANDOM \% 60))" ; /opt/imunify360/venv/share/imunify360/scripts/check-detached.py > /dev/null 2>&1 || :
+17 4 * * *     root    /usr/libexec/report-command-error /opt/imunify360/venv/share/imunify360/scripts/update_components_versions.py > /dev/null 2>&1
+
+0 * * * *   root    imunify-antivirus imunify-patch subscriptions refresh > /dev/null 2>&1

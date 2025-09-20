@@ -1,0 +1,2 @@
+# DO NOT EDIT. AUTOMATICALLY GENERATED.
+0 3 18 * * root /usr/bin/imunify360-agent malware user scan --background >/dev/null 2>&1

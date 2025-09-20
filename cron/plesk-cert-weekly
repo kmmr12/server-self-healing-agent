@@ -1,0 +1,1 @@
+10 4 * * 0 root ALERT_EMAIL="" DISCORD_WEBHOOK="" /usr/local/bin/check_plesk_cert.sh

@@ -1,0 +1,4 @@
+# CONTENT OF THIS FILE IS GENERATED AUTOMATICALLY, DO NOT EDIT
+SHELL=/bin/bash
+MAILTO=""
+* * * * * root /usr/sbin/imunify-notifier -update-cron

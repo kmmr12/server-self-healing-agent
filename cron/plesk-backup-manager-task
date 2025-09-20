@@ -1,0 +1,1 @@
+3,18,33,48	*	*	*	*	root [ -x /opt/psa/admin/sbin/backupmng ] && /opt/psa/admin/sbin/backupmng >/dev/null 2>&1

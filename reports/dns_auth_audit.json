@@ -1,9 +1,9 @@
 {
-  "checked_at": "2025-09-20T14:30:54+00:00",
+  "checked_at": "2025-09-20T18:54:03+00:00",
   "domains": [
     {
       "domain": "charmposh.com",
-      "spf": "brevo-code:f0522e1324e40d2221bf1ef5e6ac2f3b|google-site-verification=QaMBm8wRYVznhALgmdvZCzQPU-QllDSsTsMvzIvHhH4|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|",
+      "spf": "google-site-verification=QaMBm8wRYVznhALgmdvZCzQPU-QllDSsTsMvzIvHhH4|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:f0522e1324e40d2221bf1ef5e6ac2f3b|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -13,7 +13,7 @@
     },
     {
       "domain": "ecoffeefinder.com",
-      "spf": "pinterest-site-verification=6563b8e5ea1c815a8093dd7835d4f03b|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|google-site-verification=aliu04b-ccSIY5_B_X7BAjZ7UP2ne6NLj98yfMZ85jw|",
+      "spf": "google-site-verification=aliu04b-ccSIY5_B_X7BAjZ7UP2ne6NLj98yfMZ85jw|pinterest-site-verification=6563b8e5ea1c815a8093dd7835d4f03b|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -37,13 +37,13 @@
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com|v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
-      "dkim": "",
-      "dkim_ok": false,
-      "note": "missing DKIM; "
+      "dkim": "v=DKIM1; h=sha256; k=rsa; s=email;    p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoM2RQfX4xIEmIPMtIAZwTolaKj6hcnapbhIJwk0u3BvavVuutkaLSpibMLTOH/0v3oxHOEsaHadGmFyZyWWJYnPdaF37OrBBkANaIQls64gBgAoLFE2LszjlBzq9P4hW3G/SCIFSR6Vx+RJoErwREYVOunY63jKwAgxRsvQoeFg UM3LiShiR6JR3LfFq04zVeuUgSrSsQc60+j   ZMntyWiBKqMPO5J2txYQwbcBYNRkflyMkTqej6IZYNSoTpAquq09kw+v6PugQuRnH7MoB5HbKrwQ2a/4cSFyXRGG8CcPWr/L3n+Am4DQSWYMm2hxdYkLsHpXPHww7YrB1LlS3ZVwIDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
     },
     {
       "domain": "mortgagecancellationsecrets.com",
-      "spf": "google-site-verification=bVS2IjFUoy_W6kJVHo2A6z5I7uhQwaM94HCTyINhN40|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:557494aeda7a0c78560564f77303f957|",
+      "spf": "v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:557494aeda7a0c78560564f77303f957|google-site-verification=bVS2IjFUoy_W6kJVHo2A6z5I7uhQwaM94HCTyINhN40|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -53,7 +53,7 @@
     },
     {
       "domain": "mosnarcommunications.com",
-      "spf": "google-site-verification=8dko1j3OhrCG2mYK_M3_bbBxT-X4rrJDvG_8hHK4-HM|v=spf1 include:_spf-us.ionos.com include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|brevo-code:728ae0ae19dcc2d417d216edad7f1d7d|",
+      "spf": "brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|brevo-code:728ae0ae19dcc2d417d216edad7f1d7d|google-site-verification=8dko1j3OhrCG2mYK_M3_bbBxT-X4rrJDvG_8hHK4-HM|v=spf1 include:_spf-us.ionos.com include:_spf.google.com mx ~all|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -73,7 +73,7 @@
     },
     {
       "domain": "shoppingexclusives.com",
-      "spf": "google-site-verification=SHsNBztK24-BscTF7WapQq5jWUpPnjLQibMpljVbqVg|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|",
+      "spf": "v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|google-site-verification=SHsNBztK24-BscTF7WapQq5jWUpPnjLQibMpljVbqVg|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -83,7 +83,7 @@
     },
     {
       "domain": "timerichempire.com",
-      "spf": "brevo-code:557494aeda7a0c78560564f77303f957|google-site-verification=-WtTmn98zwXW09RoL-FbAe_LkmWRewyrdJMPeIDiU1k|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|",
+      "spf": "google-site-verification=-WtTmn98zwXW09RoL-FbAe_LkmWRewyrdJMPeIDiU1k|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
       "dmarc_ok": true,
@@ -93,7 +93,7 @@
     },
     {
       "domain": "uplymedia.com",
-      "spf": "google-site-verification=6v-fY_GryRXnmsJjRD365BFPQ1515yAscVFih0rWymA|openai-domain-verification=dv-7nquAHoja675dXoXm8VN7Dtr|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|",
+      "spf": "openai-domain-verification=dv-7nquAHoja675dXoXm8VN7Dtr|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|google-site-verification=6v-fY_GryRXnmsJjRD365BFPQ1515yAscVFih0rWymA|",
       "spf_ok": true,
       "dmarc": "v=DMARC1; p=none; rua=mailto:postmaster@uplymedia.com; ruf=mailto:postmaster@uplymedia.com; fo=1; aspf=r; adkim=r; sp=none|",
       "dmarc_ok": true,

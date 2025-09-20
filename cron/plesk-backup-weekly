@@ -1,0 +1,1 @@
+10 2 * * 0 root /opt/agent/plesk_backup_weekly.sh >/var/log/agent/backup_weekly.log 2>&1
