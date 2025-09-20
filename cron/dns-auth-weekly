@@ -1,0 +1,1 @@
+40 4 * * 0 root /opt/agent/dns_spf_dkim_dmarc_audit.sh >/dev/null 2>&1

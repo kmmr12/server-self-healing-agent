@@ -1,0 +1,105 @@
+{
+  "checked_at": "2025-09-20T14:30:54+00:00",
+  "domains": [
+    {
+      "domain": "charmposh.com",
+      "spf": "brevo-code:f0522e1324e40d2221bf1ef5e6ac2f3b|google-site-verification=QaMBm8wRYVznhALgmdvZCzQPU-QllDSsTsMvzIvHhH4|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "k=rsa;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeMVIzrCa3T14JsNY0IRv5/2V1/v2itlviLQBwXsa7shBD6TrBkswsFUToPyMRWC9tbR/5ey0nRBH0ZVxp+lsmTxid2Y2z+FApQ6ra2VsXfbJP3HE6wAO0YTVEJt1TmeczhEd2Jiz/fcabIISgXEdSpTYJhb0ct0VJRxcg4c8c7wIDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "ecoffeefinder.com",
+      "spf": "pinterest-site-verification=6563b8e5ea1c815a8093dd7835d4f03b|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|google-site-verification=aliu04b-ccSIY5_B_X7BAjZ7UP2ne6NLj98yfMZ85jw|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; k=rsa; p=MIGfMA0GCSq...FakeKey...IDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "kmrmusic.online",
+      "spf": "v=spf1 include:_spf.google.com include:_spf.mailcow.email mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:728ae0ae19dcc2d417d216edad7f1d7d|google-site-verification=1uXrEhTlLD-pvc8VwyzZpxbEXRJn1XqVoL008g-3Qiw|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "",
+      "dkim_ok": false,
+      "note": "missing DKIM; "
+    },
+    {
+      "domain": "MinorityBZHub.com",
+      "spf": "google-site-verification=_BpbNoALalrF4pbDYbpuL9Ghi0igvHaf4rGnzvNBcNo|v=spf1 ip4:142.132.174.117 a mx ~all|ZOOM_verify_6WL2rpXZ7mxThvT6PZ5IrV|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:978bb70980fb9a289b89c3823ead77ce|google-site-verification=EowYsWMaNrs0iolFh-Id56dTsL8bOID6zkAT57TBHeM|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com|v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "",
+      "dkim_ok": false,
+      "note": "missing DKIM; "
+    },
+    {
+      "domain": "mortgagecancellationsecrets.com",
+      "spf": "google-site-verification=bVS2IjFUoy_W6kJVHo2A6z5I7uhQwaM94HCTyINhN40|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:557494aeda7a0c78560564f77303f957|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "",
+      "dkim_ok": false,
+      "note": "missing DKIM; "
+    },
+    {
+      "domain": "mosnarcommunications.com",
+      "spf": "google-site-verification=8dko1j3OhrCG2mYK_M3_bbBxT-X4rrJDvG_8hHK4-HM|v=spf1 include:_spf-us.ionos.com include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|brevo-code:728ae0ae19dcc2d417d216edad7f1d7d|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; k=rsa; p=MIGfMA0GCSq...FakeKey...IDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "resolveify.com",
+      "spf": "brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:bc03a68bb25fb8ab12c6deb46f0e808f|google-site-verification=AL9l1Xie43Qg7EWwWoJOYW1obiROhZdJEnMvjehWNaw|pinterest-site-verification=22c2d85147e05d74f24e8a766e2de4ce|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; k=rsa; p=MIGfMA0GCSq...FakeKey...IDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "shoppingexclusives.com",
+      "spf": "google-site-verification=SHsNBztK24-BscTF7WapQq5jWUpPnjLQibMpljVbqVg|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|brevo-code:557494aeda7a0c78560564f77303f957|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; k=rsa; p=MIGfMA0GCSq...FakeKey...IDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "timerichempire.com",
+      "spf": "brevo-code:557494aeda7a0c78560564f77303f957|google-site-verification=-WtTmn98zwXW09RoL-FbAe_LkmWRewyrdJMPeIDiU1k|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|brevo-code:373dc51913c1ac0134cb9f88a3d6a75d|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com; fo=1; sp=none; adkim=s; aspf=s|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; k=rsa; p=MIGfMA0GCSq...FakeKey...IDAQAB|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    },
+    {
+      "domain": "uplymedia.com",
+      "spf": "google-site-verification=6v-fY_GryRXnmsJjRD365BFPQ1515yAscVFih0rWymA|openai-domain-verification=dv-7nquAHoja675dXoXm8VN7Dtr|v=spf1 ip4:142.132.174.117 include:_spf.google.com mx ~all|",
+      "spf_ok": true,
+      "dmarc": "v=DMARC1; p=none; rua=mailto:postmaster@uplymedia.com; ruf=mailto:postmaster@uplymedia.com; fo=1; aspf=r; adkim=r; sp=none|",
+      "dmarc_ok": true,
+      "dkim": "v=DKIM1; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5hDx1LrQDJQHOkriOkT/UWUex6oRSSER0NATxQvi4ilq//q3GHYv00yTWGKZTDbrZGTZRwjEEepbfpLKN1qi4ZBP1j0/RtwkAmkKpyNmTL5s8bnTqkKZQChzsHTq7ZaBTNASxLHbrOl5uEosh1z8nLTWS1x0iPAR31re/TtubolHh+COjSTejYH41e3coYzrzE7VGWiD c61a0a+0c/uKf8F2sCgSTHWRUDLQFOyxrkYySGrRzJegj74Vk3SixEY8YkM8x/ntujfbyhtIx2Af9QLFrg0GSZ2dF9OzGn7LtNfJMhoBVT/3itBGYfKKEfftVTF9qKYOX6cCHl4KGuVWQQIDAQAB;|",
+      "dkim_ok": true,
+      "note": "auth ok"
+    }
+  ]
+}

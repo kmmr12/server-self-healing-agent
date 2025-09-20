@@ -1,0 +1,106 @@
+{
+  "checked_at": "2025-09-20T14:30:52+00:00",
+  "server_ip": "142.132.174.117",
+  "domains": [
+    {
+      "domain": "charmposh.com",
+      "a_record": "188.114.97.2",
+      "days_left": 32,
+      "not_after": "Oct 22 14:56:58 2025 GMT",
+      "subject": "CN = charmposh.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "ecoffeefinder.com",
+      "a_record": "188.114.96.2",
+      "days_left": 31,
+      "not_after": "Oct 22 12:33:05 2025 GMT",
+      "subject": "CN = ecoffeefinder.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "kmrmusic.online",
+      "a_record": "172.67.175.37",
+      "days_left": 36,
+      "not_after": "Oct 26 16:42:49 2025 GMT",
+      "subject": "CN = kmrmusic.online",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "MinorityBZHub.com",
+      "a_record": "142.132.174.117",
+      "days_left": 330,
+      "not_after": "Aug 17 10:09:40 2026 GMT",
+      "subject": "C = CH, L = Schaffhausen, O = Plesk, CN = Plesk, emailAddress = info@plesk.com",
+      "issuer": "C = CH, L = Schaffhausen, O = Plesk, CN = Plesk, emailAddress = info@plesk.com",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "mortgagecancellationsecrets.com",
+      "a_record": "188.114.96.2",
+      "days_left": 31,
+      "not_after": "Oct 22 13:44:55 2025 GMT",
+      "subject": "CN = mortgagecancellationsecrets.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "mosnarcommunications.com",
+      "a_record": "142.132.174.117",
+      "days_left": 56,
+      "not_after": "Nov 16 03:57:26 2025 GMT",
+      "subject": "CN = mosnarcommunications.com",
+      "issuer": "C = US, O = Let's Encrypt, CN = E6",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "resolveify.com",
+      "a_record": "104.21.17.40",
+      "days_left": 31,
+      "not_after": "Oct 22 13:44:55 2025 GMT",
+      "subject": "CN = resolveify.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "shoppingexclusives.com",
+      "a_record": "142.132.174.117",
+      "days_left": 83,
+      "not_after": "Dec 13 13:19:00 2025 GMT",
+      "subject": "CN = shoppingexclusives.com",
+      "issuer": "C = US, O = Let's Encrypt, CN = R13",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "timerichempire.com",
+      "a_record": "104.21.85.247",
+      "days_left": 31,
+      "not_after": "Oct 22 13:47:36 2025 GMT",
+      "subject": "CN = timerichempire.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    },
+    {
+      "domain": "uplymedia.com",
+      "a_record": "104.21.92.229",
+      "days_left": 31,
+      "not_after": "Oct 22 13:43:39 2025 GMT",
+      "subject": "CN = uplymedia.com",
+      "issuer": "C = US, O = Google Trust Services, CN = WE1",
+      "renewed": "no",
+      "renew_reason": ""
+    }
+  ]
+}
