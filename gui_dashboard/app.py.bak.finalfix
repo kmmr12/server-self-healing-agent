@@ -1,0 +1,40 @@
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+import asyncio, httpx
+
+app = FastAPI()
+templates = Jinja2Templates(directory="templates")
+
+AGENTS = [
+    {"id": "ollama", "port": 11434},
+    {"id": "automation_bridge", "port": 5194},
+    {"id": "n8n", "port": 5678},
+]
+
+@app.get("/api/ping")
+async def ping():
+    return {"status": "ok", "message": "dashboard gui alive"}
+
+@app.get("/api/agents")
+async def list_agents():
+    results = []
+    async with httpx.AsyncClient() as client:
+        tasks = []
+        for a in AGENTS:
+            tasks.append(client.get(f"http://127.0.0.1:{a["port"]}/api/tags", timeout=2))
+        responses = await asyncio.gather(*tasks, return_exceptions=True)
+        for a, r in zip(AGENTS, responses):
+            if isinstance(r, Exception):
+                results.append({"id": a["id"], "status": "down"})
+            else:
+                results.append({"id": a["id"], "status": "up" if r.status_code==200 else "error"})
+    return {"agents": results}
+
+@app.get("/", response_class=HTMLResponse)
+async def ui(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5902)

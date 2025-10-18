@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Agent Dashboard</title>
+<style>
+body { font-family: system-ui, sans-serif; background:#111; color:#eee; text-align:center; }
+h1 { margin-top:40px; }
+table { margin:auto; border-collapse:collapse; width:80%; }
+th, td { padding:12px 16px; border-bottom:1px solid #333; }
+th { background:#222; }
+.status-up { color:#00ff90; }
+.status-error { color:#ffdd00; }
+.status-down { color:#ff3c3c; }
+</style>
+<script>
+async function refreshAgents(){
+  const res = await fetch('/api/agents');
+  const data = await res.json();
+  const tbody = document.getElementById('agents');
+  tbody.innerHTML = '';
+  data.agents.forEach(a=>{
+    const row=document.createElement('tr');
+    row.innerHTML=`
+      <td>${a.id}</td>
+      <td>${a.status}</td>
+      <td>${a.latency_ms??'–'} ms</td>`;
+    row.className='status-'+a.status;
+    tbody.appendChild(row);
+  });
+}
+setInterval(refreshAgents, 10000);
+window.onload = refreshAgents;
+</script>
+</head>
+<body>
+<h1>AI Agent Dashboard</h1>
+<table>
+  <thead><tr><th>Agent</th><th>Status</th><th>Latency</th></tr></thead>
+  <tbody id="agents"><tr><td colspan="3">Loading...</td></tr></tbody>
+</table>
+</body>
+</html>

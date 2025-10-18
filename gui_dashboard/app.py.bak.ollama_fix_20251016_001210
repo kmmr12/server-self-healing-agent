@@ -1,0 +1,68 @@
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.middleware.cors import CORSMiddleware
+import httpx, asyncio, time
+
+app = FastAPI(title="AI Agent Dashboard")
+
+# Allow local and internal requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+templates = Jinja2Templates(directory="templates")
+
+# ---- Agent Registry (centralized + scalable) ----
+AGENTS = [
+    {"id": "ollama", "port": 11434, "category": "LLM Core"},
+    {"id": "automation_bridge", "port": 5194, "category": "Automation"},
+    {"id": "n8n", "port": 5678, "category": "Automation"},
+    {"id": "orchestrator_api", "port": 5950, "category": "Backend"},
+    {"id": "code_builder", "port": 5742, "category": "Development"},
+    {"id": "dfs_intelligence", "port": 5990, "category": "Analytics"},
+]
+
+# ---- Utility: ping agents concurrently ----
+async def ping_agents():
+    async with httpx.AsyncClient(timeout=3.0) as client:
+        tasks = []
+        for a in AGENTS:
+            url = f"http://127.0.0.1:{a['port']}/api/ping"
+            tasks.append(check_agent(client, a["id"], url))
+        results = await asyncio.gather(*tasks)
+    return results
+
+async def check_agent(client, agent_id, url):
+    try:
+        t0 = time.time()
+        resp = await client.get(url)
+        latency = round((time.time() - t0) * 1000, 1)
+        if 200 <= resp.status_code < 300:
+            return {"id": agent_id, "status": "up", "latency_ms": latency}
+        else:
+            return {"id": agent_id, "status": "error", "latency_ms": latency}
+    except Exception:
+        return {"id": agent_id, "status": "down", "latency_ms": None}
+
+# ---- Routes ----
+@app.get("/api/ping")
+async def ping():
+    return {"status": "ok", "message": "dashboard gui alive"}
+
+@app.get("/api/agents")
+async def agents():
+    results = await ping_agents()
+    return {"agents": results}
+
+@app.get("/", response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+# ---- Run (if executed manually) ----
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5902)

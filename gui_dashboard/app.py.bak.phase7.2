@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+# ============================================================
+#  AI Dashboard GUI  –  Final Stable Build  (Oct 15 2025)
+#  Works with:
+#     • Ollama  (127.0.0.1:11434, uses /api/tags)
+#     • Automation Bridge  (127.0.0.1:5194, uses /api/ping)
+#     • n8n (Docker 5678, uses /api/ping)
+# ============================================================
+
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+import asyncio, httpx
+
+app = FastAPI(title="AI Dashboard GUI")
+templates = Jinja2Templates(directory="templates")
+
+# ------------------------------------------------------------
+# Agent definitions
+# ------------------------------------------------------------
+AGENTS = [
+    {"id": "ollama", "port": 11434},
+    {"id": "automation_bridge", "port": 5194},
+    {"id": "n8n", "port": 5678},
+]
+
+# ------------------------------------------------------------
+# Health endpoints
+# ------------------------------------------------------------
+@app.get("/api/ping")
+async def ping():
+    return {"status": "ok", "message": "dashboard gui alive"}
+
+# ------------------------------------------------------------
+# Aggregate agent status
+# ------------------------------------------------------------
+@app.get("/api/agents")
+async def list_agents():
+    results = []
+    async with httpx.AsyncClient() as client:
+        for a in AGENTS:
+            try:
+                # Ollama uses /api/tags, others use /api/ping
+                endpoint = "/api/tags" if a["id"] == "ollama" else "/api/ping"
+                url = f"http://127.0.0.1:{a['port']}{endpoint}"
+                r = await client.get(url, timeout=3)
+                if 200 <= r.status_code < 300:
+                    status = "up"
+                else:
+                    status = "error"
+            except Exception:
+                status = "down"
+            results.append({"id": a["id"], "status": status})
+    return {"agents": results}
+
+# ------------------------------------------------------------
+# Simple root page
+# ------------------------------------------------------------
+@app.get("/", response_class=HTMLResponse)
+async def root(request: Request):
+    html = """
+    <html>
+      <head><title>AI Dashboard GUI</title></head>
+      <body style="font-family:sans-serif;">
+        <h2>AI Agent Dashboard</h2>
+        <p>Endpoint: <a href="/api/agents">/api/agents</a></p>
+      </body>
+    </html>
+    """
+    return HTMLResponse(content=html)
+
+# ------------------------------------------------------------
+# Main entry point
+# ------------------------------------------------------------
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5902)

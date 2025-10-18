@@ -1,0 +1,25 @@
+=== DFS Infrastructure Checkpoint – 2025-10-18 ===
+
+✅ GitHub Auth: PASS
+  - Key: /root/.ssh/github_ed25519
+  - Verified via: git ls-remote + push
+
+✅ Safe Git Sync v5: PASS
+  - Script: /root/dfs_phase7_safe_git_sync.sh
+  - Last log: /var/log/dfs/dfs_git_sync_<timestamp>.log
+
+✅ DFS Advisor Dashboard: PASS
+  - Port: 5917
+  - Systemd Unit: dfs_advisor_dashboard.service (via uvicorn)
+  - Health: {"status":"ok"}
+
+✅ Change-Safety Framework: INSTALLED
+  - Script: /root/dfs_change_safety_framework.sh
+  - Last snapshot: /mnt/HC_Volume_103276320/snapshots/golden_20251018_*.tar.gz
+  - Last sandbox: /opt/dfs_sandbox_20251018_*
+
+Next Actions:
+→ Rebuild advisor logic inside sandbox
+→ Promote with: rsync -a --delete SANDBOX/ /opt/dfs_advisor/
+
+Reference Maintainer: System @ $(hostname)
